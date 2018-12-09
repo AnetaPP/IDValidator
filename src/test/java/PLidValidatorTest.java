@@ -20,7 +20,7 @@ public class PLidValidatorTest {
     @Parameters({"ABA300000",
                 "ANF104050",
                 "CAB803709",
-                "ABA300200"})
+                "aba300000"})
     public void testIDNumberisValid(String idNumber){
         assertTrue(plValid.validate(idNumber));
     }
@@ -33,11 +33,9 @@ public class PLidValidatorTest {
         return new Object[][]{
                 {"AGD017050"},
                 {"123456789"},
-                {"HDI563018"}
+                {"HDI563018"},
+                {"ABA300200"},
+                {"ABCDUKSL"}
         };
     }
-
-
-
-
 }
