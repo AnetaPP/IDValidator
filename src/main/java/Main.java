@@ -13,16 +13,16 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        while (idNumberToCheck.length()<9 || idNumberToCheck.length()>9)
+
+        while (idNumberToCheck.length() != 9)
             try {
                 idNumberToCheck = scanner.next();
                 if (idNumberToCheck.length() == 9) {
                     boolean isValid = pliDvalidator.validate(idNumberToCheck);
                 }else{
-                System.out.println("Incorrect ID number. " +
-                        "ID has to contain 3 letters followed by 6 numbers. Please enter again:");}
+                System.out.println("ID has to contain 3 letters followed by 6 numbers. Please enter again: ");}
 
-            }catch (IllegalArgumentException ex) {
+            }catch (Exception ex) {
             }
 
         }

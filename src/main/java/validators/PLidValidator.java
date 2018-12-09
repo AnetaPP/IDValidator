@@ -45,8 +45,7 @@ public class PLidValidator implements Validator {
         IDValues.put('Y',34);
         IDValues.put('Z',35);
 
-        int iDL = iDNumber.length();
-        if (m.find() && iDL==9){
+        if (m.find()){
             char[] IDNumberArr = iDNumber.toCharArray();
             int firstLetter = IDValues.get(IDNumberArr[0]);
             int secondLetter = IDValues.get(IDNumberArr[1]);
@@ -78,5 +77,7 @@ public class PLidValidator implements Validator {
         System.out.println("ID number " +iDNumber+" is not valid.");
         return false;
     }
-}
 
+
+
+}
